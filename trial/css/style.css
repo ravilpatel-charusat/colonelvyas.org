@@ -337,12 +337,12 @@ a:hover {
     color: rgb(70, 70, 70);
   }
   
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 240px){
     .box{
-      width: 70%;
+      width: 50%;
     }
     .popup{
-      width: 70%;
+      width: 20%;
     }
   }
 
