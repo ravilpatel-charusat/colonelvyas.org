@@ -344,6 +344,9 @@ a:hover {
     .popup{
       width: 20%;
     }
+    .row{
+      width: 100%;
+    }
   }
 
 ul.a {
