@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>INDIAN NAVY</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <CENTER><input type="text" style="width: 250px;" id="myInput" placeholder="Search with name..."></CENTER><BR><BR>
+
+        <div class = "category-head">
+            <ul>
+                <div class = "category-title active" id = "all">
+                    <li>All</li>
+                    <span><i class = "fas fa-border-all"></i></span>
+                </div>
+                <div class = "category-title" id = "carrier">
+                    <li>Aircraft Carrier</li>
+                    <span><i class = "fas fa-theater-masks"></i></span>
+                </div>
+                <div class = "category-title" id = "aws">
+                    <li>Amphibious warfare ships</li>
+                    <span><i class = "fas fa-landmark"></i></span>
+                </div>
+                <div class = "category-title" id = "lst">
+                    <li>Landing ship tanks</li>
+                    <span><i class = "fas fa-chart-area"></i></span>
+                </div>
+                <div class = "category-title" id = "business">
+                    <li>Business</li>
+                    <span><i class = "fas fa-coins"></i></span>
+                </div>
+                <div class = "category-title" id = "sports">
+                    <li>Sports</li>
+                    <span><i class = "fas fa-running"></i></span>
+                </div>
+            </ul>
+        </div>
+</div><br>
+
+
+
+    <div class="row" id="list">
+        <div class="column all carrier">
+          <div class="card">
+            <img src="assets/img/navy/1_INSVikramaditya.jpg" alt="INS Vikramaditya" style="width:100%">
+            <div class="container">
+              <h2>INS <i>Vikramaditya</i> (R33)</h2>
+              <p class="title">Aircraft Carrier</p>
+              <p><a class="button" href="#popup1">Details</a></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column all carrier">
+          <div class="card">
+            <img src="assets/img/navy/1_INSVikrant.jpg" alt="INS Vikrant" style="width:100%">
+            <div class="container">
+              <h2>INS <i>Vikrant</i></h2>
+              <p class="title">Aircraft Carrier</p>
+              <p><a class="button" href="#popup2">Details</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column all">
+          <div class="card">
+            <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h2>John Doe</h2>
+              <p class="title">Designer</p>
+              <p><a class="button">Contact</a></p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<!--Popups-->
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <h2>INS <i>Vikramaditya</i> (R33)</h2>
+        <a class="close" onclick="popupclose()" href="#list">&times;</a>
+        <h3 style="color: rgb(19, 19, 19); font-size: inherit; padding-left: 9px; font-family: inherit;">Aircraft Carrier</h3>
+        <div class="content">
+            <div style="margin: 10px;">
+                <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/FyHLpVnaYAEbMHR.jpg/500px-FyHLpVnaYAEbMHR.jpg" style="width: auto; height: 200px;"></center>
+            </div>
+            <ul class="a">
+                <li><b>Class:</b> Kiev class</li>
+                <li><b>Type:</b> Aircraft Carrier</li>
+                <li><b>Origin:</b> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_Soviet_Union.svg/23px-Flag_of_the_Soviet_Union.svg.png" style="width:auto; height:inherit"> Soviet Union (Present day Russia)</li>
+                <li><b>Commissioned on:</b> 16 November 2013</li>
+                <li><b>Cost:</b> $10-11 billion (including all aircraft and systems)</li>
+                <li><b>Displacement:</b> 45,400 tonnes</li>
+                <li><b>Key notes:</b> Modified Soviet aircraft carrier Admiral Gorshkov.</li>
+              </ul>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+
+
+<!--Script for search-->
+<script>
+	var input = document.getElementById("myInput");
+input.addEventListener("input", myFunction);
+
+function myFunction(e) {
+  var filter = e.target.value.toUpperCase();
+
+  var list = document.getElementById("list");
+  var divs = list.getElementsByTagName("div");
+  for (var i = 0; i < divs.length; i++) {
+  	var a = divs[i].querySelectorAll('h2, p')[0];
+    
+    if (a) {
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        divs[i].style.display = "";
+      } else {
+        divs[i].style.display = "none";
+      }
+    }       
+  }
+
+}
+</script>
+
+<script>
+	const categoryTitle = document.querySelectorAll('.category-title');
+const allCategoryPosts = document.querySelectorAll('.all');
+
+for(let i = 0; i < categoryTitle.length; i++){
+    categoryTitle[i].addEventListener('click', filterPosts.bind(this, categoryTitle[i]));
+}
+
+function filterPosts(item){
+    changeActivePosition(item);
+    for(let i = 0; i < allCategoryPosts.length; i++){
+        if(allCategoryPosts[i].classList.contains(item.attributes.id.value)){
+            allCategoryPosts[i].style.display = "block";
+        } else {
+            allCategoryPosts[i].style.display = "none";
+        }
+    }
+}
+
+function changeActivePosition(activeItem){
+    for(let i = 0; i < categoryTitle.length; i++){
+        categoryTitle[i].classList.remove('active');
+    }
+    activeItem.classList.add('active');
+};
+
+</script>
+</html>
