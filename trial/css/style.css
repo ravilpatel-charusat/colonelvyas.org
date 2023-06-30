@@ -338,15 +338,10 @@ a:hover {
   }
   
   @media screen and (max-width: 240px){
-    .box{
-      width: 50%;
-    }
-    .popup{
-      width: 20%;
-    }
-    .row{
-      width: 100%;
-    }
+    
+   .flexscreen{
+width: 100%
+}
   }
 
 ul.a {
