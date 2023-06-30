@@ -386,15 +386,6 @@ ul.a {
           display: block;
         }
 
-        .popup {
-            margin: auto;
-            padding: 5px;
-            background: #fff;
-            border-radius: 15px;
-            width: 85%;
-            position: relative;
-            transition: all 0.5s ease-in-out;
-          }
       }
       
       .card {
@@ -524,6 +515,20 @@ ul.a {
         font-family: Tahoma, Arial, sans-serif;
         font-size: 20px;
       }
+
+      @media screen and (max-width: 650px) {
+
+        .popup {
+            margin: 15px 15px 15px 15px;
+            padding: 5px;
+            background: #fff;
+            border-radius: 15px;
+            width: 90%;
+            position: relative;
+            transition: all 0.5s ease-in-out;
+          }
+      }
+
       .popup img {
         width: 100%;
       }
