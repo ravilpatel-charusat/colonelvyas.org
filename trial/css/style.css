@@ -499,7 +499,7 @@ ul.a {
       .popup {
         margin: 45px auto;
         padding: 5px;
-        background: #fff;
+        background: #eeeeee;
         border-radius: 15px;
         width: 35%;
         position: relative;
@@ -521,7 +521,7 @@ ul.a {
         .popup {
             margin: auto;
             padding: 5px;
-            background: #fff;
+            background: #f1efef;
             border-radius: 15px;
             width: 90%;
             position: relative;
@@ -550,7 +550,7 @@ ul.a {
       .popup .content {
         max-height: 30%;
         overflow: auto;
-        color: rgb(70, 70, 70);
+        color: rgb(29, 29, 29);
       }
     
     
