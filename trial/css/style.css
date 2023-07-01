@@ -56,12 +56,16 @@
       }
 
       .card img{
-        border-radius: 15px;
+        border-radius: 7px;
       }
       
       .container {
         padding: 0 8px;
         color: #000;
+      }
+
+      .container h2{
+        padding-bottom: 0px;
       }
       
       .container::after, .row::after {
@@ -72,6 +76,7 @@
       
       .title {
         color: rgb(83, 83, 83);
+        font-size: 22px;
       }
       
       .button {
