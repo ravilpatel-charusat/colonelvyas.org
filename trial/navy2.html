@@ -9,8 +9,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <form onsubmit="">
-    <CENTER><input type="text" style="width: 250px;" id="myInput" placeholder="Search here..."><input type="submit" value="Go!"><button id="clear">Clear</button></CENTER><BR><BR></form>
+    <CENTER>
+      <input type="text" style="width: 250px;" id="myInput" placeholder="Search here...">
+      <input type="submit" value="Go!">
+      <button type="button" onclick="ClearFields();">Clear</button>
+    </CENTER>
+    
+    <BR><BR>
 
         <div class = "category-head">
             <ul>
@@ -2113,6 +2118,11 @@ function myFunction(e) {
     }       
   }
 }
+
+function ClearFields() {
+  document.getElementById("myInput").value = "";
+}
+
 
 
 
