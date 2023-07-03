@@ -92,7 +92,12 @@
       }
 
       .container h2{
-        padding-bottom: 0px;
+        padding-bottom: 2px;
+      }
+
+      .container .ship-class{
+        color: rgb(70, 70, 70);
+        font-size: 19px;
       }
       
       .container::after, .row::after {
@@ -102,8 +107,10 @@
       }
       
       .title {
-        color: rgb(83, 83, 83);
+        color: rgb(70, 70, 70);
         font-size: 22px;
+        font-weight: bold;
+        padding: 5px;
       }
       
       .button {
